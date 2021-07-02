@@ -1,5 +1,5 @@
 # takes NMPI_ROOT and NLC_ROOT from environment
-set(CMAKE_SYSTEM_NAME Aurora-VE)
+set(CMAKE_SYSTEM_NAME Linux)
 
 set(CMAKE_Fortran_COMPILER /opt/nec/ve/bin/nfort CACHE FILEPATH "Aurora Fortran compiler")
 set(CMAKE_CXX_COMPILER /opt/nec/ve/bin/nc++ CACHE FILEPATH "Aurora C++ compiler")
@@ -35,7 +35,8 @@ SET(CMAKE_C_FLAGS   "-U__GNUC_MINOR__" CACHE STRING "" FORCE)
 SET(CMAKE_CXX_FLAGS "-U__GNUC_MINOR__" CACHE STRING "" FORCE)
 
 set(CMAKE_CROSSCOMPILING_EMULATOR "/opt/nec/ve/bin/ve_exec" CACHE FILEPATH "Command to execute VE binaries")
-
+set(CMAKE_C_COMPILER_ID_RUN TRUE)
+set(CMAKE_CXX_COMPILER_ID_RUN TRUE)
 set(BLAS_LIBRARIES $ENV{NLC_ROOT}/lib/libblas_sequential.a CACHE FILEPATH "BLAS library")
 set(LAPACK_LIBRARIES $ENV{NLC_ROOT}/lib/liblapack.a CACHE FILEPATH "LAPACK library")
 
